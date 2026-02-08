@@ -1,0 +1,35 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{bookmark}
+\usepackage{hyperref}
+
+\title{BibTeX Citation Example}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Using a separate \texttt{.bib} file is the standard way to manage references in LaTeX. This allows you to reuse the same database across multiple documents.
+
+\section{Citations}
+\subsection{Classic Citations}
+One of the most famous equations is $E=mc^2$, proposed by Einstein \cite{einstein1905}.
+For typesetting, we owe everything to Donald Knuth \cite{knuth1984}.
+Michel Goossens \cite{latexcompanion} wrote the definitive guide to \LaTeX.
+
+\subsection{Online Citation}
+This guide was created by Pradhan \cite{mkdocs}.
+
+\section{How It Works}
+\begin{enumerate}
+    \item Create a \texttt{.bib} file (e.g., \texttt{references.bib}).
+    \item Use \texttt{\textbackslash cite\{key\}} in your \texttt{.tex} file.
+    \item Compile: \texttt{pdflatex} $\rightarrow$ \texttt{bibtex} $\rightarrow$ \texttt{pdflatex} $\rightarrow$ \texttt{pdflatex}.
+\end{enumerate}
+
+\bibliographystyle{plain} % plain, unsrt, alpha, abbrv, ieeetr
+\bibliography{references} % The name of your .bib file (without extensions)
+
+\end{document}

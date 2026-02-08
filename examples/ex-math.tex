@@ -1,0 +1,65 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Mathematics in LaTeX}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+LaTeX is the de facto standard for writing mathematical documents.
+
+\section{Inline vs Display Math}
+The equation for a line is $y = mx + b$.
+
+For more complex equations, use display mode:
+$$ E = mc^2 $$
+
+\section{Fractions and Roots}
+Simple Fraction: $\frac{1}{2}$
+Nested Fraction: $\frac{1}{1 + \frac{1}{x}}$
+Square Root: $\sqrt{2}$
+Cube Root: $\sqrt[3]{27}$
+
+\section{Common Notation}
+\subsection{Greek Letters}
+$\alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \iota, \kappa, \lambda, \mu, \nu, \xi, \pi, \rho, \sigma, \tau, \upsilon, \phi, \chi, \psi, \omega$
+
+$\Gamma, \Delta, \Theta, \Lambda, \Xi, \Pi, \Sigma, \Upsilon, \Phi, \Psi, \Omega$
+
+\subsection{Operators}
+Summation: $\sum_{i=1}^n i^2$
+Integral: $\int_a^b f(x) dx$
+Limit: $\lim_{x \to \infty} \frac{1}{x} = 0$
+
+\section{Matrices}
+Matrix using \texttt{pmatrix}:
+$$
+\begin{pmatrix}
+1 & 2 \\
+3 & 4
+\end{pmatrix}
+$$
+
+Matrix using \texttt{bmatrix}:
+$$
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+$$
+
+\section{Aligned Equations}
+\begin{align}
+(a+b)^2 &= (a+b)(a+b) \\
+          &= a^2 + ab + ba + b^2 \\
+          &= a^2 + 2ab + b^2
+\end{align}
+
+\end{document}

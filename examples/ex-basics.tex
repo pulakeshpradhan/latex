@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\title{LaTeX Basics Example}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This document demonstrates basic text formatting and document structure in LaTeX.
+
+\subsection{Text Formatting}
+We can make text \textbf{bold}, \textit{italic}, \underline{underlined}, or use \texttt{typewriter font}.
+We can also combine them: \textbf{\textit{Bold and Italic}}.
+
+Font sizes can vary:
+\begin{itemize}
+    \item \tiny This is tiny.
+    \item \scriptsize This is scriptsize.
+    \item \small This is small.
+    \item \normalsize This is normal.
+    \item \large This is large.
+    \item \Huge This is huge.
+\end{itemize}
+
+\subsection{Alignment}
+\begin{center}
+    This text is centered.
+\end{center}
+
+\begin{flushright}
+    This text is right-aligned.
+\end{flushright}
+
+\section{Lists}
+
+\subsection{Bulleted List}
+\begin{itemize}
+    \item Geometric Shapes
+    \begin{itemize}
+        \item Circle
+        \item Square
+        \item Triangle
+    \end{itemize}
+    \item Colors
+    \item Numbers
+\end{itemize}
+
+\subsection{Numbered List}
+\begin{enumerate}
+    \item First Step: Install LaTeX
+    \item Second Step: Choose an Editor
+    \item Third Step: write Code
+    \item Fourth Step: Compile
+\end{enumerate}
+
+\subsection{Description List}
+\begin{description}
+    \item[LaTeX] A high-quality typesetting system.
+    \item[Editor] Software to write your code (e.g., VS Code).
+    \item[PDF] The final output format.
+\end{description}
+
+\section{Conclusion}
+This concludes the basic formatting demonstration.
+
+\end{document}

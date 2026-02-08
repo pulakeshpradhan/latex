@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{bookmark}
+
+\title{Tables and Figures in LaTeX}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Tables and figures are often handled as "floats" in LaTeX, meaning LaTeX decides the optimal position.
+
+\section{Tables}
+
+\subsection{Basic Table}
+Simple table with vertical separators.
+
+\begin{tabular}{|l|c|r|}
+\hline
+\textbf{Item} & \textbf{Quantity} & \textbf{Price} \\
+\hline
+Apples & 5 & \$1.00 \\
+Bananas & 10 & \$0.50 \\
+\hline
+\end{tabular}
+
+\subsection{Professional Table (booktabs)}
+High-quality tables without vertical lines.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}llr@{}} \toprule
+        \multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2}
+        Animal & Description & Price (\$)\\ \midrule
+        Gnat  & per gram & 13.65 \\
+        & each     & 0.01 \\
+        Gnu   & stuffed  & 92.50 \\
+        Emu   & stuffed  & 33.33 \\
+        Armadillo & frozen & 8.99 \\ \bottomrule
+    \end{tabular}
+    \caption{A nicely formatted table}
+\end{table}
+
+\section{Images}
+If you don't have an image file, LaTeX can report an error.  However, for this example, we'll demonstrate the code structure using a placeholder from the \texttt{graphicx} package's draft mode, or assume `example-image` (from `mwe` package often available) exists, or simply draw a box.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=0.5\textwidth]{example-image} % Requires 'mwe' package
+    \framebox[0.5\textwidth]{\rule{0pt}{3cm} Placeholder Image}
+    \caption{This is a placeholder figure.}
+    \label{fig:placeholder}
+\end{figure}
+
+As seen in Figure \ref{fig:placeholder}, figures can be referenced easily.
+
+\end{document}
