@@ -1,0 +1,98 @@
+site_name: LaTeX for Beginners
+site_url: https://example.com/latex-beginners/
+site_description: A comprehensive guide to learning LaTeX from scratch.
+site_author: "Pulakesh Pradhan"
+copyright: "Copyright &copy; 2026 Pulakesh Pradhan"
+
+repo_name: LaTeX Beginners Guide
+repo_url: https://github.com/pulakeshpradhan/latex
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Your First Document: getting-started/first-document.md
+    - Editors: getting-started/editors.md
+  - Basics:
+    - Document Structure: basics/document-structure.md
+    - Text Formatting: basics/text-formatting.md
+    - Lists: basics/lists.md
+  - Mathematics:
+    - Inline vs Display: mathematics/inline-display.md
+    - Common Notation: mathematics/common-notation.md
+    - Fractions & Roots: mathematics/fractions-roots.md
+    - Brackets & Arrays: mathematics/brackets-arrays.md
+  - Tables and Figures:
+    - Tables: tables-figures/tables.md
+    - Figures: tables-figures/figures.md
+  - Advanced:
+    - Bibliography: advanced/bibliography.md
+    - Custom Commands: advanced/custom-commands.md
+    - Including PDFs: advanced/pdf-embedding.md
+  - Examples: examples/

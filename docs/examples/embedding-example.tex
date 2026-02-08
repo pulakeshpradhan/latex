@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+\title{Embedding Example}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document demonstrates how to embed pages from another PDF file. The following pages are from our generated `simple-report.pdf`.
+
+\includepdf[pages={1},  scale=0.9, pagecommand={\thispagestyle{plain}}]{simple-report.pdf}
+% Embed just the first page, scale it down slightly, and keep page numbering.
+
+\end{document}

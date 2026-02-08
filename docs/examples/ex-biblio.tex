@@ -1,0 +1,41 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{bookmark}
+\usepackage{hyperref}
+
+\title{Bibliography in LaTeX}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Citing sources is crucial in academic writing. LaTeX simplifies this process.
+
+\section{Citations}
+As shown by Einstein \cite{einstein1905}, $E=mc^2$ is fundamental.
+Also, check Knuth's work on TeX \cite{knuth1984}.
+
+\section{Custom Bibliography}
+For simpler documents, you can manually create the bibliography environment.
+(For larger projects, use BibTeX or BibLaTeX).
+
+\begin{thebibliography}{9}
+
+\bibitem{einstein1905}
+  Albert Einstein,
+  \textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German)
+  [On the electrodynamics of moving bodies],
+  Annalen der Physik,
+  1905.
+
+\bibitem{knuth1984}
+  Donald E. Knuth,
+  \textit{The \TeX book},
+  Addison-Wesley, Reading, Massachusetts,
+  1984.
+
+\end{thebibliography}
+
+\end{document}
