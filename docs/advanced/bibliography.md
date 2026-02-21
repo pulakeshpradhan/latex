@@ -80,6 +80,53 @@ Place `\printbibliography` where you want the references to appear.
 \printbibliography[heading=bibintoc, title={References}]
 ```
 
+## 3. In-Text Citation Commands
+
+Modern packages like `biblatex` and `natbib` provide specific commands for different citation styles.
+
+### BibLaTeX Citation Table
+
+| Command | Description | Output (**authoryear**) | Output (**numeric**) |
+|:---|:---|:---|:---|
+| `\cite{key}` | Basic citation | Einstein 1905 | [1] |
+| `\parencite{key}` | In parentheses | (Einstein, 1905) | [1] |
+| `\textcite{key}` | Narrative (author in text) | Einstein (1905) | Einstein [1] |
+| `\autocite{key}` | Context-sensitive | (Einstein, 1905) | [1] |
+| `\footcite{key}` | Citation in footnote | Citation in footer | ¹ |
+| `\citeauthor{key}` | Author name only | Einstein | Einstein |
+| `\citeyear{key}` | Year only | 1905 | 1905 |
+| `\nocite{key}` | Add to bib without citing | (No output) | (No output) |
+
+### Natbib Equivalence Table
+
+If you are using the `natbib` package, use these commands:
+
+| Natbib Command | BibLaTeX Equivalent | Purpose | Example |
+|:---|:---|:---|:---|
+| `\citet{key}` | `\textcite{key}` | Narrative citation | Einstein (1905) |
+| `\citep{key}` | `\parencite{key}` | Parenthetical citation | (Einstein, 1905) |
+| `\citet*{key}` | N/A | Full author list | Einstein, Podolsky, & Rosen (1935) |
+
+### Practical Usage Example
+
+Here is how you might use these commands in a research paper:
+
+**LaTeX Source:**
+
+```latex
+In the field of physics, \textcite{einstein1905} introduced the revolutionary 
+concept of special relativity. This work remains a cornerstone of modern 
+science \parencite{einstein1905}. Later, developers like \citeauthor{knuth1984} 
+focused on the presentation of such ideas through software, specifically in 
+his work during \citeyear{knuth1984}. General guides such as \autocite{latexcompanion} 
+provide further technical depth. For more info, see the project docs \footcite{mkdocs}.
+```
+
+**Rendered Output (Author-Year):**
+> In the field of physics, **Einstein (1905)** introduced the revolutionary concept of special relativity. This work remains a cornerstone of modern science **(Einstein, 1905)**. Later, developers like **Knuth** focused on the presentation of such ideas through software, specifically in his work during **1984**. General guides such as **(Goossens et al., 1993)** provide further technical depth. For more info, see the project docs **¹**.
+
+---
+
 ## Natbib (Alternative)
 
 Often used in sciences for author-year citations (`\citep`, `\citet`). Compatible with BibTeX styles.
