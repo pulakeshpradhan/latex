@@ -12,16 +12,16 @@ LaTeX makes referencing and formatting bibliographies powerful and automatic.
 Create a file like `references.bib` and add entries:
 
 ```bibtex
-@article{einstein,
-    author = "Albert Einstein",
-    title = "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
-    [{On} the electrodynamics of moving bodies]",
+@article{einstein1905,
+    author  = "Albert Einstein",
+    title   = "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+               [{On} the electrodynamics of moving bodies]",
     journal = "Annalen der Physik",
-    volume = "322",
-    number = "10",
-    pages = "891--921",
-    year = "1905",
-    DOI = "http://dx.doi.org/10.1002/andp.19053221004"
+    volume  = "322",
+    number  = "10",
+    pages   = "891--921",
+    year    = "1905",
+    doi     = "http://dx.doi.org/10.1002/andp.19053221004"
 }
 
 @book{latexcompanion,
@@ -42,7 +42,7 @@ Linking the `.bib` file:
 
 \begin{document}
 
-Einstein's theory of relativity \cite{einstein} revolutionized physics.
+Einstein's theory of relativity \cite{einstein1905} revolutionized physics.
 The \LaTeX\ Companion \cite{latexcompanion} is an essential book.
 
 \bibliographystyle{plain} % plain, unsrt, alpha, abbrv
@@ -135,3 +135,14 @@ Often used in sciences for author-year citations (`\citep`, `\citet`). Compatibl
 \usepackage{natbib}
 \bibliographystyle{plainnat}
 ```
+
+## 4. Troubleshooting: "Not Reflecting"
+
+If your citations or bibliography are not appearing:
+
+1. **Check Compilation Order**:
+    - For **BibTeX**: `pdflatex` → `bibtex` → `pdflatex` → `pdflatex`.
+    - For **BibLaTeX**: `pdflatex` → `biber` → `pdflatex`.
+2. **Verify File Names**: Ensure `\bibliography{filename}` or `\addbibresource{filename.bib}` exactly matches your `.bib` file name.
+3. **Check Keys**: Ensure the key in `\cite{key}` exactly matches the key in the `@entry{key, ...}` in your `.bib` file.
+4. **Auxiliary Files**: Sometimes old `.aux` or `.bbl` files cause issues. Try deleting them and re-compiling.
