@@ -1,0 +1,39 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+% BibLaTeX setup with Author-Year style
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\title{Author Citation Variations in BibLaTeX}
+\author{Pulakesh Pradhan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document demonstrates how BibLaTeX handles different numbers of authors in narrative and parenthetical citations.
+
+\section{Single Author}
+\textcite{einstein1905} published a groundbreaking paper on electrodynamics.
+The theory was revolutionary \parencite{einstein1905}.
+
+\section{Two Authors}
+\textcite{twoauthors2024} found that collaboration increases productivity.
+Recent studies support this \parencite{twoauthors2024}.
+
+\section{Three Authors}
+\textcite{latexcompanion} is a classic reference for \LaTeX\ users.
+Many tips can be found there \parencite{latexcompanion}.
+
+\section{Four or More Authors}
+\textcite{manyauthors2025} explore a wide range of topics in their new book.
+Comprehensive guides are useful \parencite{manyauthors2025}.
+
+\printbibliography
+
+\end{document}

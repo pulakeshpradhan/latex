@@ -1264,6 +1264,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#author-variations-single-two-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Variations (Single, Two, 3+)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1587,6 +1598,41 @@
 <p><strong>Rendered Output (Author-Year):</strong></p>
 <blockquote>
 <p>In the field of physics, <strong>Einstein (1905)</strong> introduced the revolutionary concept of special relativity. This work remains a cornerstone of modern science <strong>(Einstein, 1905)</strong>. Later, developers like <strong>Knuth</strong> focused on the presentation of such ideas through software, specifically in his work during <strong>1984</strong>. General guides such as <strong>(Goossens et al., 1993)</strong> provide further technical depth. For more info, see the project docs <strong>¹</strong>.</p>
+</blockquote>
+<h3 id="author-variations-single-two-3">Author Variations (Single, Two, 3+)<a class="headerlink" href="#author-variations-single-two-3" title="Permanent link">&para;</a></h3>
+<p>How citations look depends on the number of authors in the <code>.bib</code> entry:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Author Count</th>
+<th style="text-align: left;">Example <code>author</code> field</th>
+<th style="text-align: left;"><code>\textcite</code> Output</th>
+<th style="text-align: left;"><code>\parencite</code> Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1 Author</strong></td>
+<td style="text-align: left;"><code>Albert Einstein</code></td>
+<td style="text-align: left;">Einstein (1905)</td>
+<td style="text-align: left;">(Einstein, 1905)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2 Authors</strong></td>
+<td style="text-align: left;"><code>Jane Doe and John Smith</code></td>
+<td style="text-align: left;">Doe and Smith (2024)</td>
+<td style="text-align: left;">(Doe and Smith, 2024)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3+ Authors</strong></td>
+<td style="text-align: left;"><code>Alice Alpha and Bob Beta and others</code></td>
+<td style="text-align: left;">Alpha et al. (2025)</td>
+<td style="text-align: left;">(Alpha et al., 2025)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>👋 <strong>Note</strong>: The use of "et al." for 3 or more authors is automatic in styles like <code>authoryear</code> or <code>apa</code>.</p>
 </blockquote>
 <hr />
 <h2 id="natbib-alternative">Natbib (Alternative)<a class="headerlink" href="#natbib-alternative" title="Permanent link">&para;</a></h2>
