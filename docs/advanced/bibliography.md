@@ -97,6 +97,11 @@ Modern packages like `biblatex` and `natbib` provide specific commands for diffe
 | `\citeyear{key}` | Year only | 1905 | 1905 |
 | `\nocite{key}` | Add to bib without citing | (No output) | (No output) |
 
+> 🌟 **Pro Tip: Style Independence with `\autocite`**
+> Use `\autocite{key}` instead of `\cite` or `\parencite`. It is context-sensitive and adapts to the style defined in your preamble.
+>
+> - If you switch between **APA**, **MLA**, or **Chicago** (footnotes), `\autocite` automatically adjusts the formatting (e.g., converting to footnotes or changing parentheses) without you having to manually edit your text!
+
 ### Natbib Equivalence Table
 
 If you are using the `natbib` package, use these commands:
