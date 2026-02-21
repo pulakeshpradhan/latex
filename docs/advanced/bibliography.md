@@ -87,7 +87,7 @@ Modern packages like `biblatex` and `natbib` provide specific commands for diffe
 ### BibLaTeX Citation Table
 
 | Command | Description | Output (**authoryear**) | Output (**numeric**) |
-|:---|:---|:---|:---|
+| :--- | :--- | :--- | :--- |
 | `\cite{key}` | Basic citation | Einstein 1905 | [1] |
 | `\parencite{key}` | In parentheses | (Einstein, 1905) | [1] |
 | `\textcite{key}` | Narrative (author in text) | Einstein (1905) | Einstein [1] |
@@ -102,7 +102,7 @@ Modern packages like `biblatex` and `natbib` provide specific commands for diffe
 If you are using the `natbib` package, use these commands:
 
 | Natbib Command | BibLaTeX Equivalent | Purpose | Example |
-|:---|:---|:---|:---|
+| :--- | :--- | :--- | :--- |
 | `\citet{key}` | `\textcite{key}` | Narrative citation | Einstein (1905) |
 | `\citep{key}` | `\parencite{key}` | Parenthetical citation | (Einstein, 1905) |
 | `\citet*{key}` | N/A | Full author list | Einstein, Podolsky, & Rosen (1935) |
@@ -124,6 +124,18 @@ provide further technical depth. For more info, see the project docs \footcite{m
 
 **Rendered Output (Author-Year):**
 > In the field of physics, **Einstein (1905)** introduced the revolutionary concept of special relativity. This work remains a cornerstone of modern science **(Einstein, 1905)**. Later, developers like **Knuth** focused on the presentation of such ideas through software, specifically in his work during **1984**. General guides such as **(Goossens et al., 1993)** provide further technical depth. For more info, see the project docs **¹**.
+
+### Author Variations (Single, Two, 3+)
+
+How citations look depends on the number of authors in the `.bib` entry:
+
+| Author Count | Example `author` field | `\textcite` Output | `\parencite` Output |
+| :--- | :--- | :--- | :--- |
+| **1 Author** | `Albert Einstein` | Einstein (1905) | (Einstein, 1905) |
+| **2 Authors** | `Jane Doe and John Smith` | Doe and Smith (2024) | (Doe and Smith, 2024) |
+| **3+ Authors** | `Alice Alpha and Bob Beta and others` | Alpha et al. (2025) | (Alpha et al., 2025) |
+
+> 👋 **Note**: The use of "et al." for 3 or more authors is automatic in styles like `authoryear` or `apa`.
 
 ---
 
