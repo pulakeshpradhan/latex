@@ -1220,10 +1220,71 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3-in-text-citation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. In-Text Citation Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. In-Text Citation Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biblatex-citation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BibLaTeX Citation Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natbib-equivalence-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Natbib Equivalence Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-usage-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Usage Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#natbib-alternative" class="md-nav__link">
     <span class="md-ellipsis">
       
         Natbib (Alternative)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-troubleshooting-not-reflecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Troubleshooting: "Not Reflecting"
       
     </span>
   </a>
@@ -1363,16 +1424,16 @@
 <h2 id="1-bibtex">1. BibTeX<a class="headerlink" href="#1-bibtex" title="Permanent link">&para;</a></h2>
 <h3 id="creating-a-database-bib-file">Creating a Database (<code>.bib</code> file)<a class="headerlink" href="#creating-a-database-bib-file" title="Permanent link">&para;</a></h3>
 <p>Create a file like <code>references.bib</code> and add entries:</p>
-<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@article</span><span class="p">{</span><span class="nl">einstein</span><span class="p">,</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Albert Einstein&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;{Zur Elektrodynamik bewegter K{\&quot;o}rper}. ({German})</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">    [{On} the electrodynamics of moving bodies]&quot;</span><span class="p">,</span>
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@article</span><span class="p">{</span><span class="nl">einstein1905</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Albert Einstein&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;{Zur Elektrodynamik bewegter K{\&quot;o}rper}. ({German})</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">               [{On} the electrodynamics of moving bodies]&quot;</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Annalen der Physik&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;322&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="na">number</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;10&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;891--921&quot;</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;1905&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="na">DOI</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;http://dx.doi.org/10.1002/andp.19053221004&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="na">volume</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;322&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="na">number</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;10&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="na">pages</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;891--921&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="na">year</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;1905&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="na">doi</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;http://dx.doi.org/10.1002/andp.19053221004&quot;</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nc">@book</span><span class="p">{</span><span class="nl">latexcompanion</span><span class="p">,</span>
@@ -1389,7 +1450,7 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Einstein&#39;s theory of relativity <span class="k">\cite</span><span class="nb">{</span>einstein<span class="nb">}</span> revolutionized physics.
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Einstein&#39;s theory of relativity <span class="k">\cite</span><span class="nb">{</span>einstein1905<span class="nb">}</span> revolutionized physics.
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>The <span class="k">\LaTeX\</span> Companion <span class="k">\cite</span><span class="nb">{</span>latexcompanion<span class="nb">}</span> is an essential book.
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">\bibliographystyle</span><span class="nb">{</span>plain<span class="nb">}</span> <span class="c">% plain, unsrt, alpha, abbrv</span>
@@ -1418,11 +1479,133 @@
 <p>Place <code>\printbibliography</code> where you want the references to appear.</p>
 <div class="language-latex highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">\printbibliography</span><span class="na">[heading=bibintoc, title={References}]</span>
 </span></code></pre></div>
+<h2 id="3-in-text-citation-commands">3. In-Text Citation Commands<a class="headerlink" href="#3-in-text-citation-commands" title="Permanent link">&para;</a></h2>
+<p>Modern packages like <code>biblatex</code> and <code>natbib</code> provide specific commands for different citation styles.</p>
+<h3 id="biblatex-citation-table">BibLaTeX Citation Table<a class="headerlink" href="#biblatex-citation-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Output (<strong>authoryear</strong>)</th>
+<th style="text-align: left;">Output (<strong>numeric</strong>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\cite{key}</code></td>
+<td style="text-align: left;">Basic citation</td>
+<td style="text-align: left;">Einstein 1905</td>
+<td style="text-align: left;">[1]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\parencite{key}</code></td>
+<td style="text-align: left;">In parentheses</td>
+<td style="text-align: left;">(Einstein, 1905)</td>
+<td style="text-align: left;">[1]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\textcite{key}</code></td>
+<td style="text-align: left;">Narrative (author in text)</td>
+<td style="text-align: left;">Einstein (1905)</td>
+<td style="text-align: left;">Einstein [1]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\autocite{key}</code></td>
+<td style="text-align: left;">Context-sensitive</td>
+<td style="text-align: left;">(Einstein, 1905)</td>
+<td style="text-align: left;">[1]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\footcite{key}</code></td>
+<td style="text-align: left;">Citation in footnote</td>
+<td style="text-align: left;">Citation in footer</td>
+<td style="text-align: left;">¹</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\citeauthor{key}</code></td>
+<td style="text-align: left;">Author name only</td>
+<td style="text-align: left;">Einstein</td>
+<td style="text-align: left;">Einstein</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\citeyear{key}</code></td>
+<td style="text-align: left;">Year only</td>
+<td style="text-align: left;">1905</td>
+<td style="text-align: left;">1905</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\nocite{key}</code></td>
+<td style="text-align: left;">Add to bib without citing</td>
+<td style="text-align: left;">(No output)</td>
+<td style="text-align: left;">(No output)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="natbib-equivalence-table">Natbib Equivalence Table<a class="headerlink" href="#natbib-equivalence-table" title="Permanent link">&para;</a></h3>
+<p>If you are using the <code>natbib</code> package, use these commands:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Natbib Command</th>
+<th style="text-align: left;">BibLaTeX Equivalent</th>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\citet{key}</code></td>
+<td style="text-align: left;"><code>\textcite{key}</code></td>
+<td style="text-align: left;">Narrative citation</td>
+<td style="text-align: left;">Einstein (1905)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\citep{key}</code></td>
+<td style="text-align: left;"><code>\parencite{key}</code></td>
+<td style="text-align: left;">Parenthetical citation</td>
+<td style="text-align: left;">(Einstein, 1905)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>\citet*{key}</code></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Full author list</td>
+<td style="text-align: left;">Einstein, Podolsky, &amp; Rosen (1935)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="practical-usage-example">Practical Usage Example<a class="headerlink" href="#practical-usage-example" title="Permanent link">&para;</a></h3>
+<p>Here is how you might use these commands in a research paper:</p>
+<p><strong>LaTeX Source:</strong></p>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>In the field of physics, <span class="k">\textcite</span><span class="nb">{</span>einstein1905<span class="nb">}</span> introduced the revolutionary 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>concept of special relativity. This work remains a cornerstone of modern 
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>science <span class="k">\parencite</span><span class="nb">{</span>einstein1905<span class="nb">}</span>. Later, developers like <span class="k">\citeauthor</span><span class="nb">{</span>knuth1984<span class="nb">}</span> 
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>focused on the presentation of such ideas through software, specifically in 
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>his work during <span class="k">\citeyear</span><span class="nb">{</span>knuth1984<span class="nb">}</span>. General guides such as <span class="k">\autocite</span><span class="nb">{</span>latexcompanion<span class="nb">}</span> 
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>provide further technical depth. For more info, see the project docs <span class="k">\footcite</span><span class="nb">{</span>mkdocs<span class="nb">}</span>.
+</span></code></pre></div>
+<p><strong>Rendered Output (Author-Year):</strong></p>
+<blockquote>
+<p>In the field of physics, <strong>Einstein (1905)</strong> introduced the revolutionary concept of special relativity. This work remains a cornerstone of modern science <strong>(Einstein, 1905)</strong>. Later, developers like <strong>Knuth</strong> focused on the presentation of such ideas through software, specifically in his work during <strong>1984</strong>. General guides such as <strong>(Goossens et al., 1993)</strong> provide further technical depth. For more info, see the project docs <strong>¹</strong>.</p>
+</blockquote>
+<hr />
 <h2 id="natbib-alternative">Natbib (Alternative)<a class="headerlink" href="#natbib-alternative" title="Permanent link">&para;</a></h2>
 <p>Often used in sciences for author-year citations (<code>\citep</code>, <code>\citet</code>). Compatible with BibTeX styles.</p>
-<div class="language-latex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">\usepackage</span><span class="nb">{</span>natbib<span class="nb">}</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">\bibliographystyle</span><span class="nb">{</span>plainnat<span class="nb">}</span>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">\usepackage</span><span class="nb">{</span>natbib<span class="nb">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">\bibliographystyle</span><span class="nb">{</span>plainnat<span class="nb">}</span>
 </span></code></pre></div>
+<h2 id="4-troubleshooting-not-reflecting">4. Troubleshooting: "Not Reflecting"<a class="headerlink" href="#4-troubleshooting-not-reflecting" title="Permanent link">&para;</a></h2>
+<p>If your citations or bibliography are not appearing:</p>
+<ol>
+<li><strong>Check Compilation Order</strong>:<ul>
+<li>For <strong>BibTeX</strong>: <code>pdflatex</code> → <code>bibtex</code> → <code>pdflatex</code> → <code>pdflatex</code>.</li>
+<li>For <strong>BibLaTeX</strong>: <code>pdflatex</code> → <code>biber</code> → <code>pdflatex</code>.</li>
+</ul>
+</li>
+<li><strong>Verify File Names</strong>: Ensure <code>\bibliography{filename}</code> or <code>\addbibresource{filename.bib}</code> exactly matches your <code>.bib</code> file name.</li>
+<li><strong>Check Keys</strong>: Ensure the key in <code>\cite{key}</code> exactly matches the key in the <code>@entry{key, ...}</code> in your <code>.bib</code> file.</li>
+<li><strong>Auxiliary Files</strong>: Sometimes old <code>.aux</code> or <code>.bbl</code> files cause issues. Try deleting them and re-compiling.</li>
+</ol>
 
 
 
